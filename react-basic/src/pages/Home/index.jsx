@@ -52,8 +52,7 @@ class Home extends Component {
   render() {
     const { posts, page, postPerPage, allPosts, searchValue } = this.state
     const noMorePosts = page + postPerPage >= allPosts.length
-    const filteredPosts = !!searchValue 
-      ? 
+    const filteredPosts = !!searchValue ? 
       allPosts.filter(post => {
         return post.title.toLowerCase().includes(searchValue.toLowerCase())
       })

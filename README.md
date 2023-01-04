@@ -12,3 +12,8 @@
 <h3>Roadmap</h3>
 
 -  <a href="/react-basic">React básico</a>
+    ##### Links complementares
+    -  <a href="https://reactjs.org/docs/state-and-lifecycle.html">State and Lifecycle</a>
+    -  <a href="https://reactjs.org/docs/react-component.html">React.Component</a>
+    -  <a href="https://reactjs.org/docs/handling-events.html">Handling Events</a>
+    -  <a href="https://reactjs.org/docs/events.html">SyntheticEvent</a>
