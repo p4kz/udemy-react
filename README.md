@@ -18,3 +18,4 @@
     -  <a href="https://reactjs.org/docs/handling-events.html">Handling Events</a>
     -  <a href="https://reactjs.org/docs/events.html">SyntheticEvent</a>
     -  <a href="https://reactjs.org/docs/hooks-intro.html">Introducing Hooks</a>
+    -  <a href="https://github.com/sapegin/jest-cheat-sheet">Jest cheat sheet</a>
