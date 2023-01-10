@@ -19,3 +19,4 @@
     -  <a href="https://reactjs.org/docs/events.html">SyntheticEvent</a>
     -  <a href="https://reactjs.org/docs/hooks-intro.html">Introducing Hooks</a>
     -  <a href="https://github.com/sapegin/jest-cheat-sheet">Jest cheat sheet</a>
+    -  <a href="https://mswjs.io/">Mock Service worker</a>
