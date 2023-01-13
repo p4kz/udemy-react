@@ -21,3 +21,5 @@
     -  <a href="https://github.com/sapegin/jest-cheat-sheet">Jest cheat sheet</a>
     -  <a href="https://mswjs.io/">Mock Service Worker</a>
 -  <a href="/react-hooks-advanced">React Hooks (Teoria e hooks avançados)</a>
+    ##### 📜 Links complementares
+    -  <a href="https://reactjs.org/docs/hooks-state.html">Using the State Hook</a>
