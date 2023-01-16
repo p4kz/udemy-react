@@ -23,3 +23,6 @@
 -  <a href="/react-hooks-advanced">React Hooks (Teoria e hooks avançados)</a>
     ##### 📜 Links complementares
     -  <a href="https://reactjs.org/docs/hooks-state.html">Using the State Hook</a>
+    -  <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining">Optional chaining</a>
+    -  <a href="https://reactjs.org/docs/hooks-effect.html">Using the Effect Hook</a>
+    -  <a href="https://pt-br.reactjs.org/docs/hooks-rules.html">Rules of Hooks</a>
