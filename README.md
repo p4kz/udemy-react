@@ -26,3 +26,4 @@
     -  <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining">Optional chaining</a>
     -  <a href="https://reactjs.org/docs/hooks-effect.html">Using the Effect Hook</a>
     -  <a href="https://pt-br.reactjs.org/docs/hooks-rules.html">Rules of Hooks</a>
+    -  <a href="https://reactjs.org/docs/hooks-reference.html#usecallback">Using the useCallback</a>
