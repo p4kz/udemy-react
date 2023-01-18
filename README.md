@@ -1,29 +1,28 @@
 
-<p align="center">
+<div align="center">
   <img height="40px" src="https://i.imgur.com/HWpg7PP.png">
-  <p align="center">prof. Luiz Otavio Miranda</p>
-</p>
+</div>
 
-<p align="center">
-    <h3 align="center">Arquivo com exercícios Curso de React.Js e Next.Js
-    </h3>
-</p>
+<p align="center">prof. Luiz Otavio Miranda</p>
 
-<h3>📌 Roadmap</h3>
+<h3 align="center">Arquivo com exercícios Curso de React.Js e Next.Js</h3>
 
--  <a href="/react-basic">React básico</a> - <a href="https://udemy-react-vq4p.vercel.app/">Deploy</a>
+### 📌 Roadmap
+
+-  [React básico](/react-basic) - [Deploy](https://udemy-react-vq4p.vercel.app/)
     ##### 📜 Links complementares
-    -  <a href="https://reactjs.org/docs/state-and-lifecycle.html">State and Lifecycle</a>
-    -  <a href="https://reactjs.org/docs/react-component.html">React.Component</a>
-    -  <a href="https://reactjs.org/docs/handling-events.html">Handling Events</a>
-    -  <a href="https://reactjs.org/docs/events.html">SyntheticEvent</a>
-    -  <a href="https://reactjs.org/docs/hooks-intro.html">Introducing Hooks</a>
-    -  <a href="https://github.com/sapegin/jest-cheat-sheet">Jest cheat sheet</a>
-    -  <a href="https://mswjs.io/">Mock Service Worker</a>
--  <a href="/react-hooks-advanced">React Hooks (Teoria e hooks avançados)</a>
+    -  [State and Lifecycle](https://reactjs.org/docs/state-and-lifecycle.html)
+    -  [React.Component](https://reactjs.org/docs/react-component.html)
+    -  [Handling Events](https://reactjs.org/docs/handling-events.html)
+    -  [SyntheticEvent](https://reactjs.org/docs/events.html)
+    -  [Introducing Hooks](https://reactjs.org/docs/hooks-intro.html)
+    -  [Jest cheat sheet](https://github.com/sapegin/jest-cheat-sheet)
+    -  [Mock Service Worker](https://mswjs.io/)
+- [React Hooks (Teoria e hooks avançados)](/react-hooks-advanced)
     ##### 📜 Links complementares
-    -  <a href="https://reactjs.org/docs/hooks-state.html">Using the State Hook</a>
-    -  <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining">Optional chaining</a>
-    -  <a href="https://reactjs.org/docs/hooks-effect.html">Using the Effect Hook</a>
-    -  <a href="https://pt-br.reactjs.org/docs/hooks-rules.html">Rules of Hooks</a>
-    -  <a href="https://reactjs.org/docs/hooks-reference.html#usecallback">Using the useCallback</a>
+    -   [Using the State Hook](https://reactjs.org/docs/hooks-state.html)
+    -   [Optional chaining](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining)
+    -   [Using the Effect Hook](https://reactjs.org/docs/hooks-effect.html)
+    -   [Rules of Hooks](https://pt-br.reactjs.org/docs/hooks-rules.html)
+    -   [Using the useCallback](https://reactjs.org/docs/hooks-reference.html#usecallback)
+    -   [Using the useMemo](https://beta.reactjs.org/reference/react/useMemo)
