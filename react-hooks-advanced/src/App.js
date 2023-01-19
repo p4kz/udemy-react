@@ -1,12 +1,12 @@
 import './App.css';
 
-import { useEffect, useMemo, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 
-const Post = ({ post }) => {
+const Post = ({ post, handleClick }) => {
   console.log('renderizou post')
   return (
     <div key={post.id}>
-      <h1>{post.title}</h1>
+      <h1 onClick={() => handleClick(post.title)} >{post.title}</h1>
       <p>{post.body}</p>
     </div>
   )
@@ -15,17 +15,28 @@ const Post = ({ post }) => {
 function App() {
   const [posts, setPosts] = useState([])
   const [value, setValue] = useState('')
-  console.log('renderizou')
+  const input = useRef(null)
 
+  console.log('renderizou')
+  
   useEffect(() => {
     fetch('https://jsonplaceholder.typicode.com/posts')
-      .then((r) => r.json())
-      .then((r) => setPosts(r))
+    .then((r) => r.json())
+    .then((r) => setPosts(r))
   }, [])
+
+  useEffect(() => {
+    input.current.focus()
+  }, [value])
+  
+  const handleClick = (value) => {
+    setValue(value)
+  }
 
   return (
     <div>
       <input 
+        ref={input}
         type='search' 
         value={value} 
         onChange={(e) => {
@@ -37,7 +48,7 @@ function App() {
           return (
             posts.length > 0 && posts.map((post) => {
               return (
-                <Post key={post.id} post={post}></Post>
+                <Post key={post.id} post={post} handleClick={handleClick} />
               )
             })
           )
