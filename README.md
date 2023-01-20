@@ -27,3 +27,4 @@
     -   [Using the useCallback](https://reactjs.org/docs/hooks-reference.html#usecallback)
     -   [Using the useMemo](https://beta.reactjs.org/reference/react/useMemo)
     -   [Using the useRef](https://beta.reactjs.org/reference/react/useRef)
+    -   [Using the Context](https://reactjs.org/docs/context.html)
