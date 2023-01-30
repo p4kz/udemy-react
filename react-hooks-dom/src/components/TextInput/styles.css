@@ -1,0 +1,9 @@
+
+.text-input {
+  width: 100%;
+  font-size: 30px;
+  padding: 10px;
+  border: 1px solid black;
+  background: none;
+  color: #e5e5e5;
+}
