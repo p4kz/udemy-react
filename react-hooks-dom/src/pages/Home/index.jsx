@@ -33,6 +33,8 @@ const useFetch = (url, options) => {
 
   useEffect(() => {
     let wait = false
+    const controller = new AbortController()
+    const signal = controller.signal
 
     console.log(optionsRef.current.headers)
 
@@ -42,7 +44,7 @@ const useFetch = (url, options) => {
       await new Promise((r) => setTimeout(r, 1000))
 
       try {
-        const response = await fetch(urlRef.current, optionsRef.current)
+        const response = await fetch(urlRef.current, {signal, ...optionsRef.current})
         const jsonResult = await response.json()
 
         if(!wait) {
@@ -61,6 +63,7 @@ const useFetch = (url, options) => {
 
     return () => {
       wait = true
+      controller.abort()
     }
     
   }, [shouldLoad])
