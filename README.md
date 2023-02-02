@@ -10,7 +10,7 @@
 ### 📌 Roadmap
 
 -  [React básico](/react-basic) - [Deploy](https://udemy-react-vq4p.vercel.app/)
-    ##### 📜 Links complementares
+    ###### 📜 Links complementares
     -  [State and Lifecycle](https://reactjs.org/docs/state-and-lifecycle.html)
     -  [React.Component](https://reactjs.org/docs/react-component.html)
     -  [Handling Events](https://reactjs.org/docs/handling-events.html)
@@ -18,8 +18,10 @@
     -  [Introducing Hooks](https://reactjs.org/docs/hooks-intro.html)
     -  [Jest cheat sheet](https://github.com/sapegin/jest-cheat-sheet)
     -  [Mock Service Worker](https://mswjs.io/)
+  <br>
+  <br>
 - [React Hooks (Teoria e hooks avançados)](/react-hooks-advanced)
-    ##### 📜 Links complementares
+    ###### 📜 Links complementares
     -   [Using the State Hook](https://reactjs.org/docs/hooks-state.html)
     -   [Optional chaining](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining)
     -   [Using the Effect Hook](https://reactjs.org/docs/hooks-effect.html)
