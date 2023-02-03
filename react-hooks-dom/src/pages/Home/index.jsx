@@ -1,45 +1,89 @@
-import { useState } from 'react'
-import { useFetch } from './use-fetch'
 
+import { useCallback, useEffect, useState } from 'react';
 import './styles.css'
 
-export const Home = () => {
-  const [postId, setPostId] = useState('')
-  const [ result, loading ] = useFetch('https://jsonplaceholder.typicode.com/posts/' + postId, {
-    headers: {
-      abc: "1" + postId,
-    }
+const useAsync = (asyncFunction, shouldRun) => {
+  const [state, setState] = useState({
+    result: null,
+    error: null,
+    status: 'idle'
   })
- 
-  if(loading) {
-    return <p>Loading...</p>
-  }
 
-  const handleClick = (id) => {
-    setPostId(id)
-  }
+  const run = useCallback(async () => {
+    console.log('EFFECT')
+    await new Promise((r) => setTimeout(r, 2000))
 
-  if(!loading && result) {
+    setState({
+      result: null,
+      error: null,
+      status: 'pending'
+    })
+
+    await new Promise((r) => setTimeout(r, 2000))
+
+    return asyncFunction()
+      .then(response => {
+        setState({
+          result: response,
+          error: null,
+          status: 'settled'
+        })
+      })
+      .catch(err => {
+        setState({
+          result: null,
+          error: err,
+          status: 'error'
+        })
+      })
+  }, [asyncFunction])
+
+  useEffect(() => {
+    if (shouldRun) {
+      run()
+    }
+  }, [run, shouldRun]) 
+
+  return [run, state.result, state.error, state.status]
+}
+
+const fetchData = async () => {
+  await new Promise((r) => setTimeout(r, 2000))
+  const data = await fetch('https://jsonplaceholder.typicode.com/posts')
+  const json = await data.json()
+  return json
+}
+
+export const Home = () => {
+  const [post, setPost] = useState(null)
+  const [reFetchData, result, error, status] = useAsync(fetchData, true) 
+
+
+  if(status === 'idle') {
     return (
-      <div>
-        {result?.length > 0 ? (
-          result.map((p) => (
-            <div key={`post-${p.id}`} onClick={() => {handleClick(p.id)}}> 
-              <p>{p.title}</p>
-            </div>
-          )) 
-        ) : (
-          <div onClick={() => handleClick('')}> 
-            <p>{result.title}</p>
-          </div>
-        )}
-      </div> 
+      <pre>idle: Nada executando</pre>
+    )
+  }  
+  
+  if(status === 'pending') {
+    return (
+      <pre>pending: loading...</pre>
     )
   }
 
-  return (
-    <h1>oi</h1>
-  )
+  if(status === 'error') {
+    return (
+      <pre>error: {error.message}</pre>
+    )
+  }
+
+  if(status === 'settled') {
+    return (
+      <pre>settled: {JSON.stringify(result, null, 2)}</pre>
+    )
+  }
+
+  return 'ixxx'
 }
 
 export default Home;
