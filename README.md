@@ -34,3 +34,4 @@
     -   [Making setInterval Declarative with React Hooks](https://overreacted.io/making-setinterval-declarative-with-react-hooks/)
     -   [useLayoutEffect](https://beta.reactjs.org/reference/react/useLayoutEffect)
     -   [useImperativeHandle](https://beta.reactjs.org/reference/react/useImperativeHandle)
+    -   [useDebugValue](https://beta.reactjs.org/reference/react/useDebugValue)
