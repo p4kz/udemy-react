@@ -1,47 +1,58 @@
-import { useDebugValue, useEffect, useState } from 'react'
-import './styles.css'
+import { Component, useEffect, useState } from "react"
 
-const useMediaQuery = (queryValue, initialValue = false) => {
-  const [match, setMatch] = useState(false)
-
-  useDebugValue(`query : ${queryValue}`)
-
-  useEffect(() => {
-    let isMounted = true
-    const matchMedia = window.matchMedia(queryValue)
-
-    const handleChange = () => {
-      if(!isMounted) return
-      setMatch(!!matchMedia.matches)
-    }
-
-    matchMedia.addEventListener('change', handleChange)
-
-    setMatch(!!matchMedia.matches)
-
-    return () => {
-      isMounted = false
-      matchMedia.removeEventListener('change', handleChange)
-    }
-
-  }, [queryValue])
-
-  return match
+const s = {
+  style: {
+    fontSize: '60px'
+  }
 } 
 
-export const Home = () => {
-  const huge = useMediaQuery('(min-width: 980px)')
-  const big = useMediaQuery('(max-width: 979px) and (min-width: 768px)')
-  const small = useMediaQuery('(max-width: 967px) and (min-width: 321px)')
-  const background = huge ? 'green' : big ? 'red' : small ? 'yeallow': null
+class MyErrorBoundary extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
 
+
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+
+  componentDidCatch(error, errorInfo) {
+    // console.log(error, errorInfo);  
+  }
+
+  render() {
+    if (this.state.hasError) {
+      return <h1>Something went wrong.</h1>;
+    }
+    return this.props.children; 
+  }
+}
+
+const ItWillThrowError = () => {
+  const [counter, setCounter] = useState(0)
+
+  useEffect(() => {
+    if(counter > 3) {
+      throw new Error('que chato')
+    }
+  },[counter])
+
+  return <div>
+    <button onClick={() => setCounter((s) => s + 1)}>
+      Click  {counter}
+    </button>
+  </div>
+}
+
+export const Home = () => {
+  
   return (
     <>
-      <div>
-        <h1 style={{ backgroundColor: background }}>oi</h1>
-      </div>
+      <MyErrorBoundary>
+        <ItWillThrowError />
+      </MyErrorBoundary>
     </>
   )
 }
 
-export default Home;
