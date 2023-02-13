@@ -1,4 +1,4 @@
-import { Component, useEffect, useState } from "react"
+import React, { Children, cloneElement, useState } from "react"
 
 const s = {
   style: {
@@ -6,53 +6,34 @@ const s = {
   }
 } 
 
-class MyErrorBoundary extends Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
+const TurnOnOff = ({children}) => {
+  const [isON, setIsON] = useState(false)
+  const onTurn = () => setIsON(s => !s)
 
-
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-
-  componentDidCatch(error, errorInfo) {
-    // console.log(error, errorInfo);  
-  }
-
-  render() {
-    if (this.state.hasError) {
-      return <h1>Something went wrong.</h1>;
-    }
-    return this.props.children; 
-  }
+  return Children.map(children, (child) => {
+    const newChild = cloneElement(child, {
+      isON,
+      onTurn
+    })
+    return newChild
+  })
 }
 
-const ItWillThrowError = () => {
-  const [counter, setCounter] = useState(0)
+const TurnedOn = ({isOn, children}) => (isOn ? children : null)
+const TurnedOFF = ({isOn, children}) => (isOn ? null : children)
 
-  useEffect(() => {
-    if(counter > 3) {
-      throw new Error('que chato')
-    }
-  },[counter])
-
-  return <div>
-    <button onClick={() => setCounter((s) => s + 1)}>
-      Click  {counter}
-    </button>
-  </div>
+const TurnButton = ({ isON, onTurn, ...props }) => {
+  return <button onClick={onTurn}{...props}>turn is {isON ? 'OFF' : 'ON'}</button>
 }
 
 export const Home = () => {
   
   return (
-    <>
-      <MyErrorBoundary>
-        <ItWillThrowError />
-      </MyErrorBoundary>
-    </>
+    <TurnOnOff>
+      <TurnedOn>ON</TurnedOn>
+      <TurnedOFF>OFF</TurnedOFF>
+      <TurnButton {...s}/> 
+    </TurnOnOff>
   )
 }
 
