@@ -1,0 +1,22 @@
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  min-height: 100vh;
+  color: #fff;
+  padding: 30px;
+}
+
+.button-container {
+  display: flex;
+  align-items: flex-end;
+  min-height: 90px;
+}
+
+.search-container {
+  margin-bottom: 40px;
+}
+
+.search-container h1 {
+  margin-bottom: 20px;
+}
