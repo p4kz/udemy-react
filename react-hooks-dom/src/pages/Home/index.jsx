@@ -1,44 +1,20 @@
-import React, { createContext, useContext, useState } from "react"
+import React, { Suspense, useState } from "react"
+// import LazyComponent from "../lazy.component"
 
-const s = {
-  style: {
-    fontSize: '60px'
-  }
-}
 
-const TurnOnOffContext = createContext()
 
-const TurnOnOff = ({children}) => {
-  const [isOn, setIsOn] = useState(false)
-  const onTurn = () => setIsOn((s) => !s)
-
-  return <TurnOnOffContext.Provider value={{isOn, onTurn}}>{children}</TurnOnOffContext.Provider>
-}
-
-const TurnedOn = ({children}) => {
-  const { isOn } = useContext(TurnOnOffContext)
-
-  return (isOn ? children : null)
-}
-
-const TurnedOFF = ({children}) => {
-  const { isOn } = useContext(TurnOnOffContext)
-  return (isOn ? null : children)
-}
-
-const TurnButton = ({...props }) => {
-  const { isOn, onTurn } = useContext(TurnOnOffContext)
-  return <button onClick={onTurn}{...props}>turn is {isOn ? 'OFF' : 'ON'}</button>
-}
+const LazyComponent = React.lazy(() => import('../lazy.component'))
 
 export const Home = () => {
-  
+  const [show, setShow] = useState(false)
+
   return (
-    <TurnOnOff>
-      <TurnedOn>ON</TurnedOn>
-      <TurnedOFF>OFF</TurnedOFF>
-      <TurnButton {...s}/> 
-    </TurnOnOff>
+    <div>
+      <button onClick={() => {setShow((s) => !s)}}>show {show ? 'on': 'off'}</button>
+      <Suspense fallback={<p>loading...</p>}>
+        {show && <LazyComponent />} 
+      </Suspense>
+    </div>
   )
 }
 

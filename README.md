@@ -37,3 +37,4 @@
     -   [useDebugValue](https://beta.reactjs.org/reference/react/useDebugValue)
     -   [Hook Flow](https://github.com/donavon/hook-flow)
     -   [Error Boundaries](https://reactjs.org/docs/error-boundaries.html)
+    -   [Code-Splitting](https://reactjs.org/docs/code-splitting.html)
