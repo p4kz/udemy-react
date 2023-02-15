@@ -1,8 +1,6 @@
 import React, { Suspense, useState } from "react"
 // import LazyComponent from "../lazy.component"
 
-
-
 const LazyComponent = React.lazy(() => import('../lazy.component'))
 
 export const Home = () => {
