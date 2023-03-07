@@ -8,6 +8,8 @@ export const Menu = () => {
       <ul>
         <li><Link to='/'>Home</Link></li>
         <li><Link to='/about'>about</Link></li>
+        <li><Link to='/posts'>posts</Link></li>
+        <li><Link to='/post/10'>posts 10</Link></li>
       </ul>
     </nav>
   )
