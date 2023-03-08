@@ -10,6 +10,7 @@ export const Menu = () => {
         <li><Link to='/about'>about</Link></li>
         <li><Link to='/posts'>posts</Link></li>
         <li><Link to='/post/10'>posts 10</Link></li>
+        <li><Link to='/redirect'>Redirect</Link></li>
       </ul>
     </nav>
   )
