@@ -42,3 +42,8 @@
     ###### 📜 Links complementares
     - [ViteJS](/https://vitejs.dev/guide/)
     - [React Router](/https://github.com/remix-run/react-router)
+- [React landing pages + Strapi](/react-landing-page)
+    ###### 📜 Links complementares
+    -   [elephantsql](https://api.elephantsql.com)
+    -   [strapi](https://strapi.io/)
+
