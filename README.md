@@ -38,10 +38,14 @@
     -   [Hook Flow](https://github.com/donavon/hook-flow)
     -   [Error Boundaries](https://reactjs.org/docs/error-boundaries.html)
     -   [Code-Splitting](https://reactjs.org/docs/code-splitting.html)
+    <br/>
+    <br/>
 - [React Router Dom](/react-router-dom)
     ###### 📜 Links complementares
     - [ViteJS](/https://vitejs.dev/guide/)
     - [React Router](/https://github.com/remix-run/react-router)
+    <br/>
+    <br/>
 - [React landing pages + Strapi](/react-landing-page)
     ###### 📜 Links complementares
     -   [Elephantsql](https://api.elephantsql.com)
