@@ -44,6 +44,8 @@
     - [React Router](/https://github.com/remix-run/react-router)
 - [React landing pages + Strapi](/react-landing-page)
     ###### 📜 Links complementares
-    -   [elephantsql](https://api.elephantsql.com)
-    -   [strapi](https://strapi.io/)
+    -   [Elephantsql](https://api.elephantsql.com)
+    -   [Strapi](https://strapi.io/)
+    -   [Cloudinary](https://cloudinary.com/)
+    -   [Provider upload to cloudinary](https://github.com/strapi/strapi/tree/main/packages/providers/upload-cloudinary)
 
