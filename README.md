@@ -52,4 +52,5 @@
     -   [Strapi](https://strapi.io/)
     -   [Cloudinary](https://cloudinary.com/)
     -   [Provider upload to cloudinary](https://github.com/strapi/strapi/tree/main/packages/providers/upload-cloudinary)
+    -   [Strapi plugin populate deep](https://www.npmjs.com/package/strapi-plugin-populate-deep)
 
