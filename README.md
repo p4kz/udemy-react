@@ -46,7 +46,8 @@
     - [React Router](/https://github.com/remix-run/react-router)
     <br/>
     <br/>
-- [React landing pages + Strapi](/react-landing-page)
+- [React landing page](/react-landing-page) + [Strapi](/strapi-api)
+
     ###### 📜 Links complementares
     -   [Elephantsql](https://api.elephantsql.com)
     -   [Strapi](https://strapi.io/)
