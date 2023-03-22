@@ -55,4 +55,5 @@
     -   [Provider upload to cloudinary](https://github.com/strapi/strapi/tree/main/packages/providers/upload-cloudinary)
     -   [Strapi plugin populate deep](https://www.npmjs.com/package/strapi-plugin-populate-deep)
     -   [Styled components](https://styled-components.com/docs/basics)
+    -   [Jest Styled components](https://github.com/styled-components/jest-styled-components)
 
