@@ -7,7 +7,7 @@ function Home() {
       <Styled.Wrapper>
         <h1>hello</h1>
       </Styled.Wrapper>
-      <Heading>Hello teste</Heading>
+      <Heading />
     </div>
   );
 }
