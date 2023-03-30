@@ -23,7 +23,6 @@ Light.parameters = {
   backgrounds: {
     default: 'light',
   },
-
 }
 
 Dark.args = {
